@@ -1,0 +1,15 @@
+body{
+    background: navy;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+  }
+  
+  select{
+    border: none;
+    padding: 10px 20px;
+    border-radius:5px;
+  }
+  
