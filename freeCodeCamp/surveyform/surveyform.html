@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" href="surveyformstyles.css">
+    </head>
+
+    <body>
+        <h1 id="title">Survey Form</h1>
+            <p id="description">This is a survey form to gather opinions on who is the best football player in the world.</p>
+                
+                <form id="survey-form">
+                    <fieldset>
+
+                        <label id="name-label"> Enter your name:
+                            <input name="Name" id="name" type="text" placeholder="Enter your name" required>
+                        </label>
+                        
+                        <label id="email-label"> Enter your email:
+                            <input id="email" name="Email" id="email" type="email" placeholder="Enter email" required>
+                        </label>
+
+                        <label id="number-label"> Enter your phone number:
+                            <input id="number" name="Number" id="number" type="number" pattern="[0-9]" min="8" max="10" placeholder="Enter your phone number">
+                        </label>
+
+                    </fieldset>
+                    
+                    <fieldset>
+
+                        <label for="dropdown">Who is the best player in the world?
+                    
+                            <select id="dropdown">
+                                <option value="Alvin Muchelle" selected></option>
+                                <option value="Lionel Messi"></option>
+                            </select>
+
+                        </label>
+
+                        <label></label>
+                        <input name="best-player" type="radio" value="Lionel Messi"/>
+                        <input name="best-player" type="radio" value="Alvin Muchelle"/>
+
+                    </fieldset>
+
+
+                  <input type="checkbox" value="Alvin"/> 
+                  <input type="checkbox" value="Muchelle"/> 
+
+                  <textarea>
+
+                  </textarea>
+
+                  <input type="submit" id="submit">
+                  
+
+                </form>

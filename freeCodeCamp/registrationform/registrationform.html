@@ -1,28 +1,72 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> 
     <title>Registration Form</title>
     <link rel="stylesheet" href="registrationformstyles.css" />
   </head>
+
   <body>
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
+
+    <!--Method attribute specifies how to send the form-data-->
+    <!--Action attribute specifies where to send the form-data-->
+
     <form method="post" action='https://register-demo.freecodecamp.org'>
       <fieldset>
-        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
-        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
-        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
-        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+
+        <!--For accessibility, link the input elements and the label elements together using the "id" and "for" attributes respectively.-->
+        <!--The name attribute is used to identify each submittable element in the form submission.-->
+        <label for="first-name">Enter Your First Name: 
+          <input id="first-name" name="first-name" type="text" required />
+        </label>
+
+        <label for="last-name">Enter Your Last Name: 
+          <input id="last-name" name="last-name" type="text" required />
+        </label>
+
+        <label for="email">Enter Your Email: 
+          <input id="email" name="email" type="email" required />
+        </label>
+
+        <!--The pattern attribute is used  to define a regular expression that the password must match to be considered valid.-->
+        <label for="new-password">Create a New Password: 
+          <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required />
+        <!--The above pattern expression matches eight or more lowercase letters or the digits 0 to 5-->
+        </label>
+
       </fieldset>
+
+      <!--To relate the radio inputs, give them the same name attribute, making it impossible to select both radio inputs at the same time.-->
+      <!--Input elements are given the same class "inline" so that the input and label texts appear on the same line following the .inline CSS rule. -->
       <fieldset>
+
         <legend>Account type (required)</legend>
-        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
-        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+
+        <label for="personal-account">
+          <input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal
+        </label>
+
+        <label for="business-account">
+          <input id="business-account" type="radio" name="account-type" class="inline" /> Business
+        </label>
+
       </fieldset>
+
+
       <fieldset>
-        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
-        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+
+        <label for="profile-picture">Upload a profile picture: 
+          <input id="profile-picture" type="file" name="file" />
+        </label>
+
+        <label for="age">Input your age (years): 
+          <input id="age" type="number" name="age" min="13" max="120" />
+        </label>
+
+        <!--Select element is a container for a group of option elements, and the option element acts as a label for each dropdown option.-->
         <label for="referrer">How did you hear about us?
           <select id="referrer" name="referrer">
             <option value="">(select one)</option>
@@ -32,14 +76,23 @@
             <option value="4">Other</option>
           </select>
         </label>
+
+        <!--The textarea element acts like an input element of type text, but comes with the added benefit of being able to receive multi-line text, and an initial number of text rows and columns-->
         <label for="bio">Provide a bio:
           <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
         </label>
+
       </fieldset>
+
+      <!--Input element is given the same class "inline" so that the input and label texts appear on the same line following the .inline CSS rule. -->
       <label for="terms-and-conditions">
         <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
       </label>
+
       <input type="submit" value="Submit" />
+      <!--<button type="submit" id="submit">Submit</button>-->
     </form>
+
   </body>
+
 </html>

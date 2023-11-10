@@ -1,9 +1,9 @@
 body {
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
+    height: 100vh;                    /* 100% of the viewport height*/
+    margin: 0;                       /*Gets rid of the horizontal scroll-bar*/
+    background-color: rgb(27,27,50);       /* #1b1b32*/
+    color: rgb(245, 246, 247);            /* #f5f6f7*/
     font-family: Tahoma;
     font-size: 16px;
   }
@@ -14,32 +14,32 @@ body {
   }
   
   form {
-    width: 60vw;
+    width: 60vw;                       /* 60% of the viewport width*/
     max-width: 500px;
     min-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto;                   /* Centers form in its parent element "body" */
     padding-bottom: 2em;
   }
   
   fieldset {
     border: none;
-    padding: 2rem 0;
+    padding: 2rem 0;                    /*root em (rem) is relative to the font-size of the html element*/
     border-bottom: 3px solid #3b3b4f;
   }
   
+  /*Selects the last element of a specific type using the last-of-type CSS pseudo-class, like this:*/
   fieldset:last-of-type {
     border-bottom: none;
   }
   
   label {
-    display: block;
+    /*Label elements are inline by default. To make them appear on separate lines, add */
+    display: block; 
     margin: 0.5rem 0;
   }
   
-  input,
-  textarea,
-  select {
-    margin: 10px 0 0 0;
+  input, textarea, select {
+    margin: 10px 0 0;
     width: 100%;
     min-height: 2em;
   }
@@ -51,9 +51,10 @@ body {
   }
   
   .inline {
-    width: unset;
+    width: unset;                       /*This will remove the earlier rule which set all the input elements to width: 100%.*/
     margin: 0 0.5em 0 0;
-    vertical-align: middle;
+    vertical-align: middle;             /* Aligns the .inline elements with the inline texts.*/
+    display: inline;
   }
   
   input[type="submit"] {
@@ -67,12 +68,9 @@ body {
     min-width: 300px;
   }
   
+  /* File input is smaller than the other text input elements. By default, a padding of 1px 2px is given to input elements you can type in. */
   input[type="file"] {
     padding: 1px 2px;
-  }
-  
-  .inline{
-    display: inline; 
   }
   
   a{
