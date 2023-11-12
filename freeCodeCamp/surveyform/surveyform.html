@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="surveyformstyles.css">
     </head>
 
-    <body>
+    <body >
         <h1 id="title">Survey Form</h1>
-            <p id="description">This is a survey form to gather opinions on who is the best football player in the world.</p>
+            <p id="description">This is a survey form gathering opinions on who is the best football player in the world.</p>
                 
                 <form id="survey-form">
                     <fieldset>
@@ -33,25 +33,56 @@
                         <label for="dropdown">Who is the best player in the world?
                     
                             <select id="dropdown">
-                                <option value="Alvin Muchelle" selected></option>
-                                <option value="Lionel Messi"></option>
+                                <option value="" >(select one)</option>
+                                <option value="1">Lionel Messi</option>
+                                <option value="2">Alvin Muchelle</option>
                             </select>
 
                         </label>
 
-                        <label></label>
-                        <input name="best-player" type="radio" value="Lionel Messi"/>
-                        <input name="best-player" type="radio" value="Alvin Muchelle"/>
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend> Who is the best manager in the world?</legend>
+
+                        <label for="mikel-arteta">
+                            <input id="mikel-arteta" type="radio" name="best-manager" class="inline" checked /> Mikel Arteta
+                        </label>
+
+                        <label for="pep-guardiola">
+                            <input id="pep-guardiola" type="radio" name="best-manager" class="inline" /> Pep Guardiola
+                        </label>
+        
 
                     </fieldset>
 
+                    <fieldset>
 
-                  <input type="checkbox" value="Alvin"/> 
-                  <input type="checkbox" value="Muchelle"/> 
+                        <legend>Who are the best free-kick takers in the history of football?</legend>
 
-                  <textarea>
+                            <label for="lionel-messi">
+                                <input id="lionel-messi" class="inline" type="checkbox" value="1"/>Lionel Messi
+                            </label>
 
-                  </textarea>
+                            <label for="alvin-muchellei">
+                                <input id="alvin-muchelle" class="inline" type="checkbox" value="2"/>Alvin Muchelle
+                            </label>
+                            
+                            <label for="cristiano-ronaldo">
+                                <input id="cristiano-ronaldo" class="inline" type="checkbox" value="3"/>Cristiano Ronaldo
+                            </label>
+
+                    </fieldset>
+                  
+                    <fieldset>
+                        <label for="position">What is your favourite playing position?
+                            <textarea id="position" name="position" rows="3" cols="30" placeholder="I love playing as a striker or as a left winger."></textarea>
+                        </label>
+                        
+                    </fieldset>
+
+                  
 
                   <input type="submit" id="submit">
                   
