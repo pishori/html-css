@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100vh;                    /* 100% of the viewport height*/
   margin: 0;                       /*Gets rid of the horizontal scroll-bar*/
-  background-color:rgb(27,27,50);       /* #1b1b32*/
+  background-color:  rgb(27,27,50);       /* #1b1b32*/
   color: rgb(245, 246, 247);            /* #f5f6f7*/
   font-family: Tahoma;
   font-size: 16px;
